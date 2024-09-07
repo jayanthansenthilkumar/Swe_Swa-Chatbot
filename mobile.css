@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('bg2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e0e0;
+    border-bottom: 1px solid #004a99;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header h3 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 500px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 20;
+}
+
+.info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.info a:hover {
+    background-color: #003d66;
+    color: #66b2ff;
+}
+
+.input-container {
+    border-radius: 10px;
+    background-color: #00274d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #004a99;
+    position: sticky;
+    bottom: 0;
+}
+
+.input-container i {
+    margin-right: 10px;
+}
+
+#user-input {
+    background-color: #003d66;
+    color: #fff;
+    border: 1px solid #004a99;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#user-input::placeholder {
+    color: #8e8e8e;
+    font-weight: 400;
+}
+
+#user-input:focus {
+    border-color: #1e90ff;
+}
+
+#send-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1e90ff;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: #1c75b1;
+}
+
+.chat-container {
+    flex: 1;
+    background: none;
+}
+
+.chat-box {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+#chat-log {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    background: none;
+}
+
+.bot, .user {
+    display: flex;
+    align-items: flex-start;
+    color: #eee;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bot {
+    background-color: #004a99;
+}
+
+.user {
+    background-color: #1e90ff;
+}
+
+#chat-log #user-icon i, #chat-log #bot-icon i {
+    background-color: #003d66;
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#chat-log #user-icon i {
+    background-color: #003d66;
+}
+
+#chat-log #bot-icon i {
+    background-color: #004a99;
+}
+
+#chat-log #user-icon i:hover, #chat-log #bot-icon i:hover {
+    background-color: #1e90ff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .info a {
+        font-size: 20px;
+    }
+
+    #user-input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #send-button {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h3 {
+        font-size: 14px;
+    }
+
+    .info a {
+        font-size: 18px;
+    }
+
+    #user-input {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    #send-button {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+
+    .bot, .user {
+        padding: 10px 8px;
+    }
+}
